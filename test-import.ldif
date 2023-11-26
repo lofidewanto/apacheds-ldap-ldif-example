@@ -1,0 +1,53 @@
+# Beispiel LDIF für LDAP-Verzeichnisstruktur
+
+# Root-DN
+dn: dc=example,dc=com
+objectClass: top
+objectClass: domain
+dc: example
+
+# Organizational Unit für Benutzer
+dn: ou=People,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: People
+
+# Benutzer John Doe
+dn: cn=John Doe,ou=People,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: John Doe
+uid: jdoe
+userPassword: {SHA}hashed_password
+mail: jdoe@example.com
+sn: Doe
+givenName: John
+
+# Benutzer Jane Smith
+dn: cn=Jane Smith,ou=People,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Jane Smith
+uid: jsmith
+userPassword: {SHA}hashed_password
+mail: jsmith@example.com
+sn: Smith
+givenName: Jane
+
+# Organizational Unit für Gruppen
+dn: ou=Groups,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: Groups
+
+# Gruppe Admins
+dn: cn=Admins,ou=Groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: Admins
+member: cn=John Doe,ou=People,dc=example,dc=com
+member: cn=Jane Smith,ou=People,dc=example,dc=com
