@@ -8,4 +8,4 @@ Example of Simple ApacheDS LDIF Files
 
 Example LDIF Structure
 
-
+![alt text](https://github.com/lofidewanto/apacheds-ldap-ldif-example/blob/main/test-import.png?raw=true)
