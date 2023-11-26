@@ -8,33 +8,4 @@ Example of Simple ApacheDS LDIF Files
 
 Example LDIF Structure
 
-dc=example,dc=com
-|-- ou=People
-|   |-- cn=John Doe
-|   |   |-- uid=jdoe
-|   |   |-- userPassword: {SHA}hashed_password
-|   |   |-- mail=jdoe@example.com
-|   |   |-- sn=Doe
-|   |   |-- givenName=John
-|   |   |-- objectClass: inetOrgPerson
-|   |   |-- objectClass: organizationalPerson
-|   |   |-- objectClass: person
-|   |   |-- objectClass: top
-|   |-- cn=Jane Smith
-|       |-- uid=jsmith
-|       |-- userPassword: {SHA}hashed_password
-|       |-- mail=jsmith@example.com
-|       |-- sn=Smith
-|       |-- givenName=Jane
-|       |-- objectClass: inetOrgPerson
-|       |-- objectClass: organizationalPerson
-|       |-- objectClass: person
-|       |-- objectClass: top
-|
-|-- ou=Groups
-    |-- cn=Admins
-        |-- member: cn=John Doe,ou=People,dc=example,dc=com
-        |-- member: cn=Jane Smith,ou=People,dc=example,dc=com
-        |-- objectClass: groupOfNames
-        |-- objectClass: top
-        |-- cn=Admins
+
